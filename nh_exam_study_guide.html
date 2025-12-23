@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video New Hire Final Exam Study Guide</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #ffffff;
+            padding: 40px 20px;
+            max-width: 850px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 16px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+        
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+            line-height: 1.5;
+        }
+        
+        .exam-details {
+            background: #f8f9ff;
+            border-left: 5px solid #667eea;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+        
+        .exam-details h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+        
+        .detail-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 15px;
+        }
+        
+        .detail-item {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #e0e7ff;
+        }
+        
+        .detail-item strong {
+            display: block;
+            color: #667eea;
+            margin-bottom: 8px;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .can-use {
+            color: #10b981;
+        }
+        
+        .cannot-use {
+            color: #ef4444;
+        }
+        
+        .section {
+            margin: 40px 0;
+            padding: 30px;
+            background: white;
+            border-radius: 12px;
+            border: 1px solid #e5e7eb;
+        }
+        
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #667eea;
+        }
+        
+        .section-icon {
+            font-size: 2em;
+        }
+        
+        .section h2 {
+            color: #1a1a1a;
+            font-size: 1.8em;
+        }
+        
+        .section h3 {
+            color: #667eea;
+            font-size: 1.3em;
+            margin: 25px 0 15px 0;
+        }
+        
+        .checklist {
+            list-style: none;
+            margin: 15px 0;
+        }
+        
+        .checklist li {
+            padding: 12px 0 12px 35px;
+            position: relative;
+            line-height: 1.6;
+        }
+        
+        .checklist li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #10b981;
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+        
+        .highlight-box {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 6px;
+        }
+        
+        .highlight-box strong {
+            color: #92400e;
+        }
+        
+        .tip-box {
+            background: #dbeafe;
+            border-left: 4px solid #3b82f6;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 6px;
+        }
+        
+        .tip-box strong {
+            color: #1e40af;
+        }
+        
+        .practice-scenarios {
+            background: #f0fdf4;
+            padding: 30px;
+            border-radius: 12px;
+            margin: 30px 0;
+            border: 2px solid #10b981;
+        }
+        
+        .scenario {
+            background: white;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+            border: 1px solid #d1fae5;
+        }
+        
+        .scenario-number {
+            display: inline-block;
+            background: #10b981;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+        
+        .scenario-question {
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .answer-space {
+            border-bottom: 2px dotted #d1d5db;
+            margin: 10px 0;
+            min-height: 60px;
+            padding: 10px 0;
+        }
+        
+        .final-checklist {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin: 40px 0;
+        }
+        
+        .final-checklist h2 {
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        .final-checklist ul {
+            list-style: none;
+        }
+        
+        .final-checklist li {
+            padding: 10px 0 10px 30px;
+            position: relative;
+        }
+        
+        .final-checklist li:before {
+            content: "□";
+            position: absolute;
+            left: 0;
+            font-size: 1.5em;
+        }
+        
+        .study-tips {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .study-tip-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #e5e7eb;
+            transition: transform 0.2s;
+        }
+        
+        .study-tip-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .study-tip-card h4 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .footer-motivation {
+            text-align: center;
+            padding: 40px;
+            background: #f8f9ff;
+            border-radius: 12px;
+            margin-top: 40px;
+        }
+        
+        .footer-motivation h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 2em;
+        }
+        
+        .footer-motivation p {
+            font-size: 1.1em;
+            color: #4b5563;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        @media print {
+            body {
+                padding: 20px;
+            }
+            .header {
+                background: #667eea;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📘 Video New Hire Final Exam Study Guide</h1>
+        <p>Your roadmap to success! This guide covers everything you need to know for your Final Exam. Use it to study, take notes, and build confidence.</p>
+    </div>
+
+    <div class="exam-details">
+        <h2>📝 Exam Details</h2>
+        <div class="detail-grid">
+            <div class="detail-item">
+                <strong>Time Limit</strong>
+                <p>60 minutes</p>
+            </div>
+            <div class="detail-item">
+                <strong>Resources You CAN Use</strong>
+                <p class="can-use">✅ Articulate Training Course<br>✅ Your personal notes<br>✅ Guru website</p>
+            </div>
+            <div class="detail-item">
+                <strong>Resources You CANNOT Use</strong>
+                <p class="cannot-use">❌ #vid-nh-guru Slack channel</p>
+            </div>
+        </div>
+        <div class="tip-box" style="margin-top: 20px;">
+            <strong>Our Goal:</strong> We want to see what you've learned and retained. This isn't about how fast you can search—it's about what you <em>know</em>.
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-header">
+            <span class="section-icon">🖥️</span>
+            <h2>Provider Dashboard & Job Management</h2>
+        </div>
+        
+        <h3>You should be able to:</h3>
+        <ul class="checklist">
+            <li>Explain how you'll know when you've been assigned a job</li>
+            <li>Navigate the Provider Dashboard to find participant information</li>
+            <li>Identify where to find expected defense counsel information</li>
+            <li>Know what to do if participant names (TA, Deponent, CR) are incorrect</li>
+            <li>Understand what to do if the Court Reporter's Provider Dashboard is purple</li>
+            <li>Complete all post-depo tasks immediately after closing the deposition room</li>
+        </ul>
+        
+        <div class="highlight-box">
+            <strong>Common Scenarios:</strong><br>
+            • Someone not listed in your Provider Dashboard shows up → What do you do?<br>
+            • You need to update participant information → Where do you go?
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-header">
+            <span class="section-icon">⏰</span>
+            <h2>Clock In/Out & Rippling</h2>
+        </div>
+        
+        <h3>You should be able to:</h3>
+        <ul class="checklist">
+            <li>Know how early you can clock in before a deposition starts</li>
+            <li>Identify what job code to use for meetings with your direct supervisor</li>
+            <li>Determine when you're required to clock out between depositions</li>
+            <li>Understand what qualifies as a meal break vs. a paid break</li>
+            <li>Know how long you have to complete post-job tasks after a depo ends</li>
+            <li>Explain when you can clock in to complete admin work</li>
+            <li>Know if you can clock in to review the Weekly Team Meeting</li>
+        </ul>
+        
+        <div class="highlight-box">
+            <strong>Key Questions to Ask Yourself:</strong><br>
+            • If my next deposition starts in [X] minutes and I'm between jobs, should I clock out?<br>
+            • What's the difference between a meal break and a paid break?<br>
+            • Can I clock in for every type of meeting?
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-header">
+            <span class="section-icon">💼</span>
+            <h2>Job Codes & Scheduling</h2>
+        </div>
+        
+        <h3>You should be able to:</h3>
+        <ul class="checklist">
+            <li>Select the correct job code for STA + REA jobs</li>
+            <li>Know what a STA typically is (duration-wise)</li>
+            <li>Understand what a Back-to-Back (B2B) deposition is</li>
+            <li>Explain the minimum required availability post-training</li>
+            <li>Know what time of day to check job assignments for the next day</li>
+            <li>Understand the process for updating your availability after training</li>
+            <li>Know if you can attend DVM when you're not assigned to a job</li>
+        </ul>
+        
+        <div class="tip-box">
+            <strong>Pro Tip:</strong> Job codes tell the story of what you're doing—make sure you're telling the right story!
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-header">
+            <span class="section-icon">🎥</span>
+            <h2>Deposition Protocols & Zoom Room Management</h2>
+        </div>
+        
+        <h3>You should be able to:</h3>
+        <ul class="checklist">
+            <li>List the initial three steps when entering a Zoom room</li>
+            <li>Know how much time in advance you should enter before the depo start time</li>
+            <li>Identify the FIRST thing to do when the witness joins</li>
+            <li>Explain what to do with the court reporter after greeting them on a Vid job</li>
+            <li>Know what to do with each participant as they join (greeting, SC App, etc.)</li>
+            <li>State the correct verbiage for going on the record after a break</li>
+            <li>List the questions to ask counsel before concluding the deposition (official read-off)</li>
+            <li>Know the maximum duration limit for a deposition</li>
+            <li>Understand what constitutes a protective order special request</li>
+        </ul>
+        
+        <div class="highlight-box">
+            <strong>Real-World Application:</strong><br>
+            Walk yourself through a deposition from start to finish. What happens at each phase? What do you say? Who do you help first?
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-header">
+            <span class="section-icon">📄</span>
+            <h2>SC App & Exhibits</h2>
+        </div>
+        
+        <h3>You should be able to:</h3>
+        <ul class="checklist">
+            <li>Identify the three essential fields each participant must complete in SC App</li>
+            <li>Know how counsel can access exhibits if SC App is added to their account</li>
+            <li>Explain how many exhibits you can share on behalf of the TA before they need the app</li>
+            <li>Determine the best way for an attorney to share exhibits</li>
+            <li>Know if participants can use SC App during non-linked depositions</li>
+            <li>Understand what to do if a participant is uncomfortable adding SC App themselves</li>
+            <li>Know whether exhibits in "Unmarked Exhibits" can be remarked later</li>
+            <li>Identify which pre-deposition task is essential for exhibits</li>
+            <li>Understand what to do if TA has "#notonsc" note on Ops page</li>
+        </ul>
+        
+        <div class="tip-box">
+            <strong>Remember:</strong> SC App is a tool to make everyone's life easier—know when and how to use it!
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-header">
+            <span class="section-icon">🛠️</span>
+            <h2>Tech Support & Troubleshooting</h2>
+        </div>
+        
+        <h3>You should be able to:</h3>
+        <ul class="checklist">
+            <li>Identify your first line of contact for AWS or OBS errors</li>
+            <li>Know the dress code for remote depositions</li>
+            <li>Understand communication expectations with Depo Support before ending a call</li>
+        </ul>
+        
+        <div class="tip-box">
+            <strong>Tech Tip:</strong> When in doubt, don't troubleshoot alone—know who to contact!
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-header">
+            <span class="section-icon">🗓️</span>
+            <h2>Scheduling & Availability</h2>
+        </div>
+        
+        <h3>You should be able to:</h3>
+        <ul class="checklist">
+            <li>Know minimum notice required for calling out or requesting time off</li>
+            <li>Explain what to do after your last scheduled depo if you're still on the clock</li>
+            <li>Describe how often you should schedule 1:1s</li>
+            <li>List all the ways to schedule a 1:1 with your supervisor</li>
+            <li>Know the minimum required availability post-training (how many full days?)</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <div class="section-header">
+            <span class="section-icon">📢</span>
+            <h2>Communication & Resources</h2>
+        </div>
+        
+        <h3>You should be able to:</h3>
+        <ul class="checklist">
+            <li>Identify where you're responsible for staying informed about team updates</li>
+            <li>Know which Slack channels to monitor (Guru, PMC, team updates)</li>
+            <li>Understand when and how to find a replacement interpreter</li>
+        </ul>
+        
+        <div class="tip-box">
+            <strong>Channels Matter:</strong> Staying plugged into the right channels = staying informed and successful!
+        </div>
+    </div>
+
+    <div class="practice-scenarios">
+        <h2 style="color: #10b981; margin-bottom: 25px;">🧠 Practice Scenarios</h2>
+        <p style="margin-bottom: 25px; font-weight: 600;">Test yourself! Write out your answers below:</p>
+        
+        <div class="scenario">
+            <span class="scenario-number">Scenario 1</span>
+            <div class="scenario-question">You enter the Zoom room 10 minutes early. What are your first three actions?</div>
+            <div class="answer-space"></div>
+        </div>
+
+        <div class="scenario">
+            <span class="scenario-number">Scenario 2</span>
+            <div class="scenario-question">The witness joins the deposition. What's the FIRST thing you do?</div>
+            <div class="answer-space"></div>
+        </div>
+
+        <div class="scenario">
+            <span class="scenario-number">Scenario 3</span>
+            <div class="scenario-question">You notice the TA's name is spelled wrong in the Provider Dashboard. What do you do?</div>
+            <div class="answer-space"></div>
+        </div>
+
+        <div class="scenario">
+            <span class="scenario-number">Scenario 4</span>
+            <div class="scenario-question">It's 8:45 AM and your first depo starts at 9:00 AM. Can you clock in yet?</div>
+            <div class="answer-space"></div>
+        </div>
+
+        <div class="scenario">
+            <span class="scenario-number">Scenario 5</span>
+            <div class="scenario-question">You finish a depo at 11:00 AM. Your next one starts at 12:30 PM. Do you need to clock out? Why or why not?</div>
+            <div class="answer-space"></div>
+        </div>
+
+        <div class="scenario">
+            <span class="scenario-number">Scenario 6</span>
+            <div class="scenario-question">An attorney asks you to share 5 exhibits on their behalf using REA. What do you do?</div>
+            <div class="answer-space"></div>
+        </div>
+
+        <div class="scenario">
+            <span class="scenario-number">Scenario 7</span>
+            <div class="scenario-question">You're having trouble with OBS during a live depo. Walk us through your troubleshooting steps in order.</div>
+            <div class="answer-space"></div>
+        </div>
+
+        <div class="scenario">
+            <span class="scenario-number">Scenario 8</span>
+            <div class="scenario-question">The court reporter's Provider Dashboard is purple when you check in. What does this mean and what should you do?</div>
+            <div class="answer-space"></div>
+        </div>
+
+        <div class="scenario">
+            <span class="scenario-number">Scenario 9</span>
+            <div class="scenario-question">What questions should you ask counsel before ending the deposition (official read-off)?</div>
+            <div class="answer-space"></div>
+        </div>
+
+        <div class="scenario">
+            <span class="scenario-number">Scenario 10</span>
+            <div class="scenario-question">Someone who wasn't listed in your Provider Dashboard joins the room and says they're defense counsel. What's your process?</div>
+            <div class="answer-space"></div>
+        </div>
+    </div>
+
+    <div class="final-checklist">
+        <h2>✅ Final Checklist Before Exam Day</h2>
+        <ul>
+            <li>Review this study guide at least <strong>twice</strong></li>
+            <li>Complete all practice scenarios above</li>
+            <li>Review your Articulate Training Course sections</li>
+            <li>Organize your notes so they're easy to reference</li>
+            <li>Get a good night's sleep</li>
+            <li>Have your resources ready (Articulate, Guru, notes)</li>
+            <li>Take a deep breath—you've got this! 💪</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <div class="section-header">
+            <span class="section-icon">💡</span>
+            <h2>Study Tips</h2>
+        </div>
+        
+        <div class="study-tips">
+            <div class="study-tip-card">
+                <h4>For Visual Learners</h4>
+                <ul style="list-style: none; padding-left: 0;">
+                    <li>• Highlight or color-code categories</li>
+                    <li>• Draw flowcharts for deposition phases</li>
+                    <li>• Create a visual timeline of a typical depo day</li>
+                </ul>
+            </div>
+            
+            <div class="study-tip-card">
+                <h4>For Hands-On Learners</h4>
+                <ul style="list-style: none; padding-left: 0;">
+                    <li>• Walk through scenarios out loud</li>
+                    <li>• Practice navigating Provider Dashboard</li>
+                    <li>• Role-play participant interactions</li>
+                </ul>
+            </div>
+            
+            <div class="study-tip-card">
+                <h4>For Note-Takers</h4>
+                <ul style="list-style: none; padding-left: 0;">
+                    <li>• Summarize each section in your own words</li>
+                    <li>• Create flashcards for quick recall items</li>
+                    <li>• Write out step-by-step processes</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-motivation">
+        <h2>🎯 Remember</h2>
+        <p>This exam tests what you've learned in training. Everything on it is something you've <strong>already practiced or discussed</strong>. The goal isn't perfection—it's demonstrating you're ready to handle real depositions safely and professionally.</p>
+        <p style="margin-top: 20px; font-size: 1.2em; color: #667eea;"><strong>You've been doing great in training. This is just confirmation of what you already know.</strong></p>
+        <p style="margin-top: 20px; font-style: italic;">Questions before exam day? Drop them in your training channel or DM your trainer directly. We're here to help you succeed! 🌟</p>
+    </div>
+</body>
+</html>
